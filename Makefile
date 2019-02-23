@@ -2,7 +2,8 @@ CXX=c++
 LIBCXX=-lstdc++
 OPT=-O3 -pedantic -Wall -Wfatal-errors
 STD=-std=c++14
-PROGS=1a.c++ 1b.c++ 2a.c++ 2b.c++ 3a.c++ 3b.c++ 4a.c++ 4b.c++ 5a.c++ 5b.c++ 6a.c++ 6b.c++
+PROGS=1a.c++ 1b.c++ 2a.c++ 2b.c++ 3a.c++ 3b.c++ 4a.c++ 4b.c++ \
+      5a.c++ 5b.c++ 6a.c++ 6b.c++ 7a.c++ 7b.c++
 
 all: $(PROGS)
 
@@ -41,6 +42,12 @@ all: $(PROGS)
 
 6b.c++: 6b.cc
 	$(CXX) 6b.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 6b.c++
+
+7a.c++: 7a.cc
+	$(CXX) 7a.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 7a.c++
+
+7b.c++: 7b.cc
+	$(CXX) 7b.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 7b.c++
 
 clean:
 	rm -f *.c++
