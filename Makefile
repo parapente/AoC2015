@@ -1,4 +1,4 @@
-CXX=c++
+CXX=clang++
 LIBCXX=-lstdc++
 OPT=-O3 -pedantic -Wall -Wfatal-errors
 STD=-std=c++14
@@ -32,28 +32,28 @@ all: $(PROGS)
 	$(CXX) 4b.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 4b.c++
 
 5a.c++: 5a.cc
-	$(CXX) 5a.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 5a.c++
+	$(CXX) 5a.cc $(LIBCXX) $(OPT) $(STD) -o 5a.c++
 
 5b.c++: 5b.cc
-	$(CXX) 5b.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 5b.c++
+	$(CXX) 5b.cc $(LIBCXX) $(OPT) $(STD) -o 5b.c++
 
 6a.c++: 6a.cc
-	$(CXX) 6a.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 6a.c++
+	$(CXX) 6a.cc $(LIBCXX) $(OPT) $(STD) -o 6a.c++
 
 6b.c++: 6b.cc
-	$(CXX) 6b.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 6b.c++
+	$(CXX) 6b.cc $(LIBCXX) $(OPT) $(STD) -o 6b.c++
 
 7a.c++: 7a.cc
-	$(CXX) 7a.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 7a.c++
+	$(CXX) 7a.cc $(LIBCXX) $(OPT) $(STD) -o 7a.c++
 
 7b.c++: 7b.cc
-	$(CXX) 7b.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 7b.c++
+	$(CXX) 7b.cc $(LIBCXX) $(OPT) $(STD) -o 7b.c++
 
 8a.c++: 8a.cc
-	$(CXX) 8a.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 8a.c++
+	$(CXX) 8a.cc $(LIBCXX) $(OPT) $(STD) -o 8a.c++
 
 8b.c++: 8b.cc
-	$(CXX) 8b.cc $(LIBCXX) $(OPT) $(STD) -lcrypto -o 8b.c++
+	$(CXX) 8b.cc $(LIBCXX) $(OPT) $(STD) -o 8b.c++
 
 clean:
 	rm -f *.c++
