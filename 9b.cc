@@ -42,10 +42,10 @@ void permute(std::vector<std::vector<std::string>>& perm, std::vector<std::strin
     }
 }
 
-void find_shortest(std::vector<std::vector<std::string>> perm, std::unordered_map<std::tuple<std::string,std::string>, int, KeyHash, KeyEqual> dist)
+void find_longest(std::vector<std::vector<std::string>> perm, std::unordered_map<std::tuple<std::string,std::string>, int, KeyHash, KeyEqual> dist)
 {
-    int mindist = 999999999;
-    std::vector<std::string> minpath;
+    int maxdist = 0;
+    std::vector<std::string> maxpath;
 
     for (auto p : perm) {
         int pathdist = 0;
@@ -59,15 +59,15 @@ void find_shortest(std::vector<std::vector<std::string>> perm, std::unordered_ma
                 pathdist += tmp;
             prevnode = node;
         }
-        if (pathdist < mindist) {
-            mindist = pathdist;
-            minpath = p;
+        if (pathdist > maxdist) {
+            maxdist = pathdist;
+            maxpath = p;
         }
     }
-    std::cout << "Path with minimum distance: ";
-    for (auto n : minpath)
+    std::cout << "Path with maximum distance: ";
+    for (auto n : maxpath)
         std::cout << n << " ";
-    std::cout << ": " << mindist << std::endl;
+    std::cout << ": " << maxdist << std::endl;
 }
 
 int main(void) {
@@ -98,6 +98,6 @@ int main(void) {
 
     permute(perm, usetvector, 0, usetvector.size()-1);
     //std::cout << perm.size() << std::endl;
-    find_shortest(perm, dist);
+    find_longest(perm, dist);
     fin.close();
 }

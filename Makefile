@@ -1,10 +1,10 @@
 CXX=clang++
 LIBCXX=-lstdc++
-OPT=-O3 -pedantic -Wall -Wfatal-errors
+OPT=-g -pedantic -Wall -Wfatal-errors
 STD=-std=c++14
 PROGS=1a.c++ 1b.c++ 2a.c++ 2b.c++ 3a.c++ 3b.c++ 4a.c++ 4b.c++ \
       5a.c++ 5b.c++ 6a.c++ 6b.c++ 7a.c++ 7b.c++ 8a.c++ 8b.c++ \
-      9a.c++
+      9a.c++ 9b.c++
 
 all: $(PROGS)
 
@@ -58,6 +58,9 @@ all: $(PROGS)
 
 9a.c++: 9a.cc
 	$(CXX) 9a.cc $(LIBCXX) $(OPT) $(STD) -o 9a.c++
+
+9b.c++: 9b.cc
+	$(CXX) 9b.cc $(LIBCXX) $(OPT) $(STD) -o 9b.c++
 
 clean:
 	rm -f *.c++
