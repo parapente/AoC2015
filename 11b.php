@@ -79,6 +79,7 @@ unset($lines[count($lines)-1]);
 
 $curpass = $lines[0];
 $newpass = find_next_passwd($curpass);
+$newpass = find_next_passwd($newpass);
 echo $newpass.PHP_EOL;
 
 fclose($fin);
