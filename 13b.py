@@ -48,6 +48,11 @@ for line in lines:
         else:
             dist[(person2, person1)] = factor
 
+# Add myself
+persons.add('Me')
+for p in persons:
+    dist[(p, 'Me')] = 0
+
 distc = dict(dist)
 for k, v in distc.items():
     (key1, key2) = k
