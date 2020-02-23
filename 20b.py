@@ -28,6 +28,7 @@ def main():
     lines = data.split('\n')
     lines.pop()
     maxpresents = int(lines[0])
+    counter = dict()
 
     house = 1
     housepresents = 0
@@ -50,7 +51,11 @@ def main():
         # print(elves)
         presents = 0
         for e in elves:
-            presents += e * 10
+            if e not in counter:
+                counter[e] = 0
+            counter[e] += 1
+            if counter[e] <= 50:
+                presents += e * 11
         if presents > maxpresents:
             print('House:', house, 'presents:', presents, 'elves:', elves)
             sys.exit(0)
