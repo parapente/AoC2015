@@ -48,11 +48,6 @@ for line in lines:
         else:
             dist[(person2, person1)] = factor
 
-distc = dict(dist)
-for k, v in distc.items():
-    (key1, key2) = k
-    dist[(key2, key1)] = v
-
 # for k, v in dist.items():
 #     print(k)
 #     print(v)
