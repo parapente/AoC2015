@@ -60,9 +60,15 @@ for item in perms:
     prev = ''
     for person in item:
         if prev != '':
-            total += dist[(person, prev)]
+            if person < prev:
+                total += dist[(person, prev)]
+            else:
+                total += dist[(prev, person)]
         else:
-            total += dist[(person, item[len(item)-1])]
+            if person < item[len(item)-1]:
+                total += dist[(person, item[len(item)-1])]
+            else:
+                total += dist[(item[len(item)-1], person)]
         prev = person
     if total > maxhappy:
         maxhappy = total
