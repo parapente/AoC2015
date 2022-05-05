@@ -1,0 +1,6 @@
+Spell         Cost   Health   Damage   Armor   Mana Effect
+MagicMissile    53        0        4       0      0     -1
+Drain           73        2        2       0      0     -1
+Shield         113        0        0       7      0      6
+Poison         173        0        3       0      0      6
+Recharge       229        0        0       0    101      5
