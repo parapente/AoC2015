@@ -5,7 +5,7 @@ STD=-std=c++17
 PROGS=1a.c++ 1b.c++ 2a.c++ 2b.c++ 3a.c++ 3b.c++ 4a.c++ 4b.c++ \
       5a.c++ 5b.c++ 6a.c++ 6b.c++ 7a.c++ 7b.c++ 8a.c++ 8b.c++ \
       9a.c++ 9b.c++ 10a.c++ 10b.c++ 11a.c++ 11b.c++ 12a.c++   \
-      12b.c++ 13a.c++ 13b.c++ 14a.c++ 14b.c++
+      12b.c++ 13a.c++ 13b.c++ 14a.c++ 14b.c++ 15a.c++ 15b.c++
 
 all: $(PROGS)
 
@@ -92,6 +92,12 @@ all: $(PROGS)
 
 14b.c++: 14b.cc
 	$(CXX) 14b.cc $(LIBCXX) $(OPT) $(STD) -o 14b.c++
+
+15a.c++: 15a.cc
+	$(CXX) 15a.cc $(LIBCXX) $(OPT) $(STD) -o 15a.c++
+
+15b.c++: 15b.cc
+	$(CXX) 15b.cc $(LIBCXX) $(OPT) $(STD) -o 15b.c++
 
 clean:
 	rm -f *.c++

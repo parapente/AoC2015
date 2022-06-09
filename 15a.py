@@ -6,7 +6,6 @@ with open('15.dat') as f:
     data = f.read()
 lines = data.split('\n')
 lines.pop()
-secs = 2503
 regex = r"(\w+): \w+ (-*\d+), \w+ (-*\d+), \w+ (-*\d), \w+ (-*\d+), \w+ (-*\d+)"
 ingredient = list()
 for line in lines:
