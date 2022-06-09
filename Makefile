@@ -1,11 +1,11 @@
 CXX=clang++
 LIBCXX=-lstdc++
 OPT=-g -pedantic -Wall -Wfatal-errors
-STD=-std=c++14
+STD=-std=c++17
 PROGS=1a.c++ 1b.c++ 2a.c++ 2b.c++ 3a.c++ 3b.c++ 4a.c++ 4b.c++ \
       5a.c++ 5b.c++ 6a.c++ 6b.c++ 7a.c++ 7b.c++ 8a.c++ 8b.c++ \
       9a.c++ 9b.c++ 10a.c++ 10b.c++ 11a.c++ 11b.c++ 12a.c++   \
-      12b.c++ 13a.c++ 13b.c++
+      12b.c++ 13a.c++ 13b.c++ 14a.c++ 14b.c++
 
 all: $(PROGS)
 
@@ -86,6 +86,12 @@ all: $(PROGS)
 
 13b.c++: 13b.cc
 	$(CXX) 13b.cc $(LIBCXX) $(OPT) $(STD) -o 13b.c++
+
+14a.c++: 14a.cc
+	$(CXX) 14a.cc $(LIBCXX) $(OPT) $(STD) -o 14a.c++
+
+14b.c++: 14b.cc
+	$(CXX) 14b.cc $(LIBCXX) $(OPT) $(STD) -o 14b.c++
 
 clean:
 	rm -f *.c++
